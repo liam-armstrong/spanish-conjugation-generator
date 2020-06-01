@@ -86,7 +86,7 @@ def generateQuestions(maxProblems):
         solution = solve(subjectInt, verb, tense)
         if(solution == 0):
             if(i >= (maxProblems * 0.8)):
-                print("Argument -n is larger than maximum ("+ str(maxProblems * 0.9) + ")")
+                print("Argument -n is larger than maximum ("+ str(maxProblems * 0.8) + ")")
                 sys.exit(2)
             continue
         else:
@@ -103,6 +103,5 @@ def solve(subject, verb, tense):
     return ans
 
 populateVerbs()
-print(len(verbs))
 maxProblems = populateSolutions()
 generateQuestions(maxProblems)
